@@ -1,2 +1,0 @@
-I am adding some changes to this file.
-Again we are adding new text to this so that we can learn what is happening in git.
