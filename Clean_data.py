@@ -25,7 +25,7 @@ class DataClean(object):  #Why we do it here, I will make t his clear in the fol
         
         with open(self.filename, "r") as filein:
         
-            self.df = pd.read_csv(filein, self.seperator, self.header)
+            self.df = pd.read_csv(filein, sep = self.seperator, header = self.header)
             
             # self help us to attach every method and attributes to the class DataClean
             
@@ -54,7 +54,7 @@ class DataClean(object):  #Why we do it here, I will make t his clear in the fol
       
         return self
     
-    def convert_datatype(self, datetime_format ):
+    def convert_datatype(self, datetime_format):
     
     
         self.df = self.drop_columns(self)
