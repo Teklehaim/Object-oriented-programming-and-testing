@@ -4,16 +4,23 @@ class Employee:
     def __init__(self, fname, lname):
         self.firstname = fname
         self.lastname = lname
+        self.fullname = self.firstname+" "+ self.lastname
+
         
     # A method used to print the names and full name of each employee
     def printname(self):
         print('Full Name: ', self.firstname, self.lastname)
         
-    def monthlysalary(self):
+    def monthlysalary(self): # 
+        # Instead writing manually, we can create attribute for the price 
+
         return 12*8*30
 
     def title(self):
         return "Junior"
+    
+    # This can also integrated in the attribute as a position 
+    # ( self.title = position kind of )
         
     def printtitle(self):
         print("Title = ", self.title())   
