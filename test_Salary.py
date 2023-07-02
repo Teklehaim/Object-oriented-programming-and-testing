@@ -23,10 +23,7 @@ class  TestSalary(unittest.TestCase):
         self.assertEqual("Jun AB", self.employ.printname())
 
         self.assertIsInstance(self.employ.printname(), str)
-
-        self.a("Teklehaimanot Aman", self.test_salary.printname("Teklehaimanot"))
-
-
+        
     def test_monthlysalary(self):
 
         self.assertAlmostEqual(20*8*30, self.manager.Monthlysalary())
