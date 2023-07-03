@@ -9,9 +9,9 @@ class  TestSalary(unittest.TestCase):
 
     def setUp(self):
 
-        self.employ = Employee
-        self.manager = Manager
-        self.teamleader = TeamLader
+        self.employ = Employee("Jun", "AB")
+        self.manager = Manager("Mang", "CD")
+        self.teamleader = TeamLader("TeamLead", "EF")
 
 
         pass
@@ -20,15 +20,16 @@ class  TestSalary(unittest.TestCase):
     
     def test_name(self):
 
-        self.assertEqual("Jun AB", self.employ.printname())
+        self.assertEqual("Jun", self.employ.firstname)
+        self.assertEqual("AB", self.employ.lastname)
 
-        self.assertIsInstance(self.employ.printname(), str)
+        #self.assertIsInstance(self.employ.printname(), str) #the print name doesn't return value. What do you want test here?
         
     def test_monthlysalary(self):
 
-        self.assertAlmostEqual(20*8*30, self.manager.Monthlysalary())
+        self.assertAlmostEqual(20*8*30, self.manager.monthlysalary())
 
-        self.assertEqual(12*8*30, self.employ.Monthlysalary())
+        self.assertEqual(12*8*30, self.employ.monthlysalary())
 
     def test_title(self):
 
@@ -39,8 +40,5 @@ class  TestSalary(unittest.TestCase):
 
 
 if __name__=="__main__":
-
-    a = TestSalary()
-
-    print(a.test_title())
+    unittest.main()
  
