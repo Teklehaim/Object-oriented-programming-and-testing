@@ -5,11 +5,18 @@ class Employee:
         self.firstname = fname
         self.lastname = lname
         self.fullname = self.firstname+" "+ self.lastname
-
-        
+    
     # A method used to print the names and full name of each employee
     def printname(self):
+
+        return self.firstname+ " "+ self.lastname
         print('Full Name: ', self.firstname, self.lastname)
+    
+    def printfullname(self):
+
+        return self.fullname
+
+        #print("FUll Name :", self.fullname)
         
     def monthlysalary(self): # 
         # Instead writing manually, we can create attribute for the price 
@@ -36,7 +43,7 @@ class Manager(Employee):
         return "Manager"
 
 # A TeamLeader class inheriting from the Manager class with modification on the title (polymorphism)       
-class TeamLader(Manager):
+class TeamLeader(Manager):
     def title(self):
         return "Team Leader"  
         
@@ -53,8 +60,10 @@ def main():
     AllEmployees.append(MangCD)    
 
     # instantiating an object of type TeamLeader class and adding it to the list    
-    TeamLeadCD = TeamLader("TeamLead", "EF") 
+    TeamLeadCD = TeamLeader("TeamLead", "EF") 
     AllEmployees.append(TeamLeadCD)
+
+   
     
     # Printing all the the employees names, titles and salaries
     print('\n----------------------------')
