@@ -29,7 +29,7 @@ class Manager(Employee):
         return "Manager"
 
 # A TeamLeader class inheriting from the Manager class with modification on the title (polymorphism)       
-class TeamLader(Manager):
+class TeamLeader(Manager):
     def title(self):
         return "Team Leader"  
         
@@ -46,7 +46,7 @@ def main():
     AllEmployees.append(MangCD)    
 
     # instantiating an object of type TeamLeader class and adding it to the list    
-    TeamLeadCD = TeamLader("TeamLead", "EF") 
+    TeamLeadCD = TeamLeader("TeamLead", "EF") 
     AllEmployees.append(TeamLeadCD)
     
     # Printing all the the employees names, titles and salaries
