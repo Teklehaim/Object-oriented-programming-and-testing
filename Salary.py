@@ -6,30 +6,30 @@ class Employee:
         self.lastname = lname
         
     # A method used to print the names and full name of each employee
-    def printname(self):
+    def printName(self):
         print('Full Name: ', self.firstname, self.lastname)
         
-    def monthlysalary(self):
+    def monthlySalary(self):
         return 12*8*30
 
     def title(self):
         return "Junior"
         
-    def printtitle(self):
+    def printTitle(self):
         print("Title = ", self.title())   
         
-    def printsalary(self):
-        print("Gross monthly salary = ", self.monthlysalary())
+    def printSalary(self):
+        print("Gross monthly salary = ", self.monthlySalary())
         
  # A manager class inheriting from the Employee class and modifying how its salary is calculated (polymorphism)       
 class Manager(Employee):
-    def monthlysalary(self):
+    def monthlySalary(self):
         return 20*8*30
     def title(self):
         return "Manager"
 
 # A TeamLeader class inheriting from the Manager class with modification on the title (polymorphism)       
-class TeamLader(Manager):
+class TeamLeader(Manager):
     def title(self):
         return "Team Leader"  
         
@@ -46,15 +46,15 @@ def main():
     AllEmployees.append(MangCD)    
 
     # instantiating an object of type TeamLeader class and adding it to the list    
-    TeamLeadCD = TeamLader("TeamLead", "EF") 
+    TeamLeadCD = TeamLeader("TeamLead", "EF") 
     AllEmployees.append(TeamLeadCD)
     
     # Printing all the the employees names, titles and salaries
     print('\n----------------------------')
     for empX in AllEmployees:
-        empX.printname()
-        empX.printtitle()
-        empX.printsalary()
+        empX.printName()
+        empX.printTitle()
+        empX.printSalary()
         print('----------------------------\n')
         
 #Entry point to execute the main method
