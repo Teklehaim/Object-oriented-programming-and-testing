@@ -31,17 +31,17 @@ class  TestSalary(unittest.TestCase):
 
     def test_title(self):
 
-    with self.subTest("Tests title"):
-        self.assertTrue("Manager", self.manager.title(), "This is expected to be correct ")
+        with self.subTest("Tests title"):
+            self.assertTrue("Manager", self.manager.title(), "This is expected to be correct ")
 
-    with self.subTest("Test the employ's Title "):
-        self.assertTrue("Junior", self.employ.title(), "This is expected to be correct")
+        with self.subTest("Test the employ's Title "):
+            self.assertTrue("Junior", self.employ.title(), "This is expected to be correct")
 
-    with self.subTest("Test the team leader's Title "):
-        self.assertTrue("Team Leader", self.teamleader.title(), "This will expected to be correct")
+        with self.subTest("Test the team leader's Title "):
+            self.assertTrue("Team Leader", self.teamleader.title(), "This will expected to be correct")
 
-    with self.subTest("Test the team leader's Title "):
-        self.assertNotEqual("Team Lader", self.teamleader.title(), "This is wrong, expected to fail")
+        with self.subTest("Test the team leader's Title "):
+            self.assertNotEqual("Team Lader", self.teamleader.title(), "This is wrong, expected to fail")
 
 if __name__=="__main__":
 
