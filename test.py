@@ -8,40 +8,38 @@ class  TestSalary(unittest.TestCase):
 
     def setUp(self):
 
-        self.employ = Employee
-        self.manager = Manager
-        self.teamleader = TeamLeader
-
-
-        pass
-
-        #self.test_salary = Salary
+        self.employ = Employee("Teklehaimanot", "Aman")
+        self.manager = Manager("Tewelde", "Beraki")
+        self.teamleader = TeamLeader("Getnet", "Ayele")
     
     def test_name(self):
 
-        self.assertEqual("Jun AB", self.employ.printname())
+        self.assertEqual("Teklehaimanot"+" "+"Aman", self.employ.firstname+" "+self.employ.lastname)
+        self.assertEqual("Getnet"+" "+"Ayele", self.teamleader.firstname+" "+self.teamleader.lastname)
+        self.assertIsInstance(self.employ.firstname, str)
+        self.assertIsInstance(self.employ.lastname, str)
 
-        self.assertIsInstance(self.employ.printname(), str)
-        
+
     def test_monthlysalary(self):
+        self.assertEqual(12*8*30, self.employ.monthlysalary())
+        self.assertAlmostEqual(20*8*30, self.manager.monthlysalary())
+        self.assertAlmostEqual(20*8*30, self.teamleader.monthlysalary())
 
-        self.assertAlmostEqual(20*8*30, self.manager.Monthlysalary())
-
-        self.assertEqual(12*8*30, self.employ.Monthlysalary())
 
     def test_title(self):
 
         with self.subTest("Tests title"):
-            self.assertTrue("Manager", self.manager.title(), "This is expected to be correct ")
+
+            self.assertTrue("Manager"==self.manager.title(), "This is expected to be correct ")
 
         with self.subTest("Test the employ's Title "):
-            self.assertTrue("Junior", self.employ.title(), "This is expected to be correct")
+            self.assertTrue("Junior"==self.employ.title(), "This is expected to be correct")
 
         with self.subTest("Test the team leader's Title "):
-            self.assertTrue("Team Leader", self.teamleader.title(), "This will expected to be correct")
+            self.assertTrue("Team Leader"==self.teamleader.title(), "This will expected to be correct")
 
         with self.subTest("Test the team leader's Title "):
-            self.assertNotEqual("Team Lader", self.teamleader.title(), "This is wrong, expected to fail")
+            self.assertNotEqual("Team Lader"==self.teamleader.title(), "This is wrong, expected to fail")
 
 if __name__=="__main__":
 
