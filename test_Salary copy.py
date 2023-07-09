@@ -10,7 +10,7 @@ class  TestSalary(unittest.TestCase):
 
         self.employ = Employee
         self.manager = Manager
-        self.teamleader = TeamLeader
+        self.teamleader = TeamLader
 
 
         pass
@@ -45,5 +45,7 @@ class  TestSalary(unittest.TestCase):
 
 if __name__=="__main__":
 
-    unittest.main()
+    a = TestSalary()
 
+    print(a.test_title())
+ 
