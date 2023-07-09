@@ -45,7 +45,5 @@ class  TestSalary(unittest.TestCase):
 
 if __name__=="__main__":
 
-    a = TestSalary()
+    unittest.main()
 
-    print(a.test_title())
- 
