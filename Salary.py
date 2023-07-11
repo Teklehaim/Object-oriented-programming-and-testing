@@ -4,18 +4,19 @@ class Employee:
     def __init__(self, fname, lname):
         self.firstname = fname
         self.lastname = lname
-        
+        self.fullname = self.firstname+" "+ self.lastname
+    
     # A method used to print the names and full name of each employee
-    def printName(self):
+    def printname(self):
         print('Full Name: ', self.firstname, self.lastname)
         
-    def monthlySalary(self):
+    def monthlysalary(self):
         return 12*8*30
 
     def title(self):
         return "Junior"
         
-    def printTitle(self):
+    def printtitle(self):
         print("Title = ", self.title())   
         
     def printSalary(self):
@@ -48,6 +49,8 @@ def main():
     # instantiating an object of type TeamLeader class and adding it to the list    
     TeamLeadCD = TeamLeader("TeamLead", "EF") 
     AllEmployees.append(TeamLeadCD)
+
+   
     
     # Printing all the the employees names, titles and salaries
     print('\n----------------------------')
